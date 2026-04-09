@@ -1,0 +1,1226 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Conférence UCM sur l'Intelligence Artificielle — De l'outil à l'agent, par Diederick Legrain, AI-Shift.be" />
+  <meta name="author" content="Diederick Legrain — AI-Shift.be" />
+  <title>IA : De l'outil à l'agent — Conférence UCM · AI-Shift.be</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+</head>
+<body>
+
+<!-- ════════════════════════════════════════════════════════
+     SCROLL PROGRESS BAR
+════════════════════════════════════════════════════════ -->
+<div id="progress-bar" role="progressbar" aria-label="Progression de lecture"></div>
+
+<!-- ════════════════════════════════════════════════════════
+     HEADER
+════════════════════════════════════════════════════════ -->
+<header role="banner">
+  <div class="header-inner">
+
+    <!-- Logo -->
+    <a href="https://ai-shift.be" target="_blank" rel="noopener" class="logo" aria-label="AI-Shift.be">
+      <span class="logo-name">AI-Shift.be</span>
+      <span class="logo-tagline">par Diederick Legrain</span>
+    </a>
+
+    <!-- Desktop nav -->
+    <nav class="nav-links" role="navigation" aria-label="Navigation principale">
+      <a href="#capacites">Capacités</a>
+      <a href="#defauts">Défauts</a>
+      <a href="#vibe-coding">Vibe Coding</a>
+      <a href="#agents">Agents</a>
+      <a href="#modeles">Modèles</a>
+      <a href="#conseils">Conseils</a>
+      <a href="#quiz">Quiz</a>
+    </nav>
+
+    <!-- Actions -->
+    <div class="header-actions">
+      <button class="notes-toggle" aria-label="Mes notes" title="Ouvrir mes notes">
+        <!-- Notebook icon -->
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+          <polyline points="14 2 14 8 20 8"/>
+          <line x1="16" y1="13" x2="8" y2="13"/>
+          <line x1="16" y1="17" x2="8" y2="17"/>
+          <line x1="10" y1="9" x2="8" y2="9"/>
+        </svg>
+        <span class="notes-badge" aria-live="polite">0</span>
+      </button>
+
+      <!-- Hamburger -->
+      <button class="hamburger" aria-label="Menu" aria-controls="mobile-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+  </div>
+</header>
+
+<!-- Mobile nav -->
+<nav class="mobile-nav" id="mobile-nav" role="navigation" aria-label="Navigation mobile">
+  <a href="#capacites">Capacités</a>
+  <a href="#defauts">Défauts de l'IA</a>
+  <a href="#vibe-coding">Vibe Coding</a>
+  <a href="#agents">Navigateurs agentiques</a>
+  <a href="#modeles">Panorama des modèles</a>
+  <a href="#conseils">Conseils pratiques</a>
+  <a href="#quiz">Quiz</a>
+</nav>
+
+<!-- ════════════════════════════════════════════════════════
+     MAIN CONTENT
+════════════════════════════════════════════════════════ -->
+<main>
+
+  <!-- ══════════════════════════════════════════════════════
+       1. HERO
+  ══════════════════════════════════════════════════════ -->
+  <section id="hero" aria-label="Introduction">
+    <!-- Background effects -->
+    <div class="hero-bg">
+      <div class="hero-orb hero-orb-1"></div>
+      <div class="hero-orb hero-orb-2"></div>
+      <div class="hero-orb hero-orb-3"></div>
+      <div class="hero-grid"></div>
+      <div class="hero-particles" aria-hidden="true"></div>
+    </div>
+
+    <div class="hero-content">
+      <!-- Badge -->
+      <div class="hero-badge">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"/>
+          <polyline points="12 6 12 12 16 14"/>
+        </svg>
+        Conférence UCM · 2026
+      </div>
+
+      <!-- Title -->
+      <h1 class="hero-title">
+        Intelligence Artificielle :<br>
+        <span class="gradient-text">De l'outil à l'agent</span>
+      </h1>
+
+      <!-- Subtitle -->
+      <p class="hero-subtitle">
+        Comment l'IA passe de l'assistant passif à l'agent autonome —
+        capacités techniques, défauts à connaître, panorama des outils et
+        conseils concrets pour votre entreprise.
+      </p>
+
+      <!-- Author -->
+      <div class="hero-author">
+        <div class="hero-avatar" aria-hidden="true">DL</div>
+        <div class="hero-author-info">
+          <div class="hero-author-name">Diederick Legrain</div>
+          <div class="hero-author-role">Fondateur · <a href="https://ai-shift.be" target="_blank" rel="noopener" style="color:var(--accent-cyan);text-decoration:none;">AI-Shift.be</a></div>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="hero-cta">
+        <a href="#capacites" class="btn btn-primary">
+          Découvrir la conférence
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="6 9 12 15 18 9"/>
+          </svg>
+        </a>
+        <a href="#quiz" class="btn btn-secondary">
+          Tester mes connaissances
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+            <line x1="12" y1="17" x2="12.01" y2="17"/>
+          </svg>
+        </a>
+        <a href="https://superprompterdl.netlify.app/" target="_blank" rel="noopener" class="btn btn-secondary">
+          Superprompter
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+            <polyline points="15 3 21 3 21 9"/>
+            <line x1="10" y1="14" x2="21" y2="3"/>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Scroll hint -->
+      <div class="hero-scroll-hint" aria-hidden="true">
+        <div class="scroll-indicator">
+          <div class="scroll-dot"></div>
+        </div>
+        <span>Défiler pour explorer</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════
+       2. CAPACITÉS TECHNIQUES
+  ══════════════════════════════════════════════════════ -->
+  <section id="capacites" aria-label="Capacités techniques">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+          </svg>
+          Capacités techniques
+        </div>
+        <h2 class="section-title">L'IA comprend, elle n'exécute plus</h2>
+        <p class="section-subtitle">
+          L'Intelligence Artificielle a franchi un cap décisif : elle ne se contente plus d'exécuter des instructions,
+          elle comprend le sens, le contexte et l'intention.
+        </p>
+      </div>
+
+      <!-- Feature cards -->
+      <div class="grid-3 reveal-stagger">
+
+        <div class="feature-card reveal">
+          <div class="card-icon card-icon-blue" style="margin-bottom:16px;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M12 8v4l3 3"/>
+            </svg>
+          </div>
+          <h3 style="font-size:1.1rem; margin-bottom:8px; color:var(--text-primary);">Exécution → Compréhension</h3>
+          <p style="font-size:0.9rem;">
+            L'IA moderne ne suit plus simplement des règles. Elle comprend le sens des mots,
+            l'intention derrière les demandes et peut raisonner de manière complexe.
+          </p>
+          <div style="margin-top:16px;">
+            <span class="badge badge-blue">Rupture majeure</span>
+          </div>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="card-icon card-icon-cyan" style="margin-bottom:16px;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="3" width="18" height="18" rx="2"/>
+              <line x1="3" y1="9" x2="21" y2="9"/>
+              <line x1="9" y1="21" x2="9" y2="9"/>
+            </svg>
+          </div>
+          <h3 style="font-size:1.1rem; margin-bottom:8px; color:var(--text-primary);">Fenêtre de contexte</h3>
+          <p style="font-size:0.9rem;">
+            La quantité d'information qu'une IA peut traiter en une seule fois a explosé.
+            Gemini peut traiter ~4 500 pages de texte en une seule requête — l'équivalent de plusieurs romans.
+          </p>
+          <div style="margin-top:16px;">
+            <span class="badge badge-cyan">Jusqu'à 2M tokens</span>
+          </div>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="card-icon card-icon-purple" style="margin-bottom:16px;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <ellipse cx="12" cy="5" rx="9" ry="3"/>
+              <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/>
+              <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>
+            </svg>
+          </div>
+          <h3 style="font-size:1.1rem; margin-bottom:8px; color:var(--text-primary);">RAG</h3>
+          <p style="font-size:0.9rem;">
+            <strong style="color:var(--text-primary);">Retrieval-Augmented Generation</strong> : donnez vos propres documents
+            à l'IA. Elle s'appuie dessus pour répondre avec précision, sans inventer.
+          </p>
+          <div style="margin-top:16px;">
+            <span class="badge badge-purple">Vos données, vos règles</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Context Window Visual -->
+      <div class="context-visual reveal" style="margin-top:40px;">
+        <h3>Comparaison des fenêtres de contexte</h3>
+
+        <div class="context-bar-item">
+          <div class="context-bar-header">
+            <span class="context-bar-label">
+              <span style="display:inline-flex;align-items:center;gap:8px;">
+                <span style="width:10px;height:10px;background:#10a37f;border-radius:50%;display:inline-block;"></span>
+                ChatGPT
+              </span>
+            </span>
+            <span class="context-bar-value">200 000 tokens ≈ 450 pages</span>
+          </div>
+          <div class="context-bar-track">
+            <div class="context-bar-fill chatgpt" data-width="10"></div>
+          </div>
+        </div>
+
+        <div class="context-bar-item">
+          <div class="context-bar-header">
+            <span class="context-bar-label">
+              <span style="display:inline-flex;align-items:center;gap:8px;">
+                <span style="width:10px;height:10px;background:#cc785c;border-radius:50%;display:inline-block;"></span>
+                Claude (Anthropic)
+              </span>
+            </span>
+            <span class="context-bar-value">200 000 tokens ≈ 450 pages</span>
+          </div>
+          <div class="context-bar-track">
+            <div class="context-bar-fill claude" data-width="10"></div>
+          </div>
+        </div>
+
+        <div class="context-bar-item">
+          <div class="context-bar-header">
+            <span class="context-bar-label">
+              <span style="display:inline-flex;align-items:center;gap:8px;">
+                <span style="width:10px;height:10px;background:#4285f4;border-radius:50%;display:inline-block;"></span>
+                Gemini (Google)
+              </span>
+            </span>
+            <span class="context-bar-value" style="color:var(--accent-cyan);">2 000 000 tokens ≈ 4 500 pages !</span>
+          </div>
+          <div class="context-bar-track">
+            <div class="context-bar-fill gemini" data-width="100"></div>
+          </div>
+        </div>
+
+        <p style="font-size:0.8rem; color:var(--text-muted); margin-top:16px;">
+          * 1 token ≈ 0,75 mot en anglais. La fenêtre de contexte détermine la quantité de texte que l'IA peut lire et analyser en une seule fois.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════
+       3. LES 4 DÉFAUTS DE L'IA
+  ══════════════════════════════════════════════════════ -->
+  <section id="defauts" aria-label="Les 4 défauts de l'IA">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
+            <line x1="12" y1="9" x2="12" y2="13"/>
+            <line x1="12" y1="17" x2="12.01" y2="17"/>
+          </svg>
+          À connaître
+        </div>
+        <h2 class="section-title">Les 4 défauts de l'IA</h2>
+        <p class="section-subtitle">
+          L'IA est un outil puissant mais imparfait. Connaître ses limites vous permet
+          de l'utiliser avec discernement et d'en tirer le meilleur parti.
+        </p>
+        <p style="font-size:0.85rem; color:var(--text-muted); margin-top:12px;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline;vertical-align:middle;margin-right:4px;">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+            <polyline points="14 2 14 8 20 8"/>
+          </svg>
+          Cliquez (ou survolez) les cartes pour les retourner
+        </p>
+      </div>
+
+      <div class="flip-cards-grid reveal-stagger">
+
+        <!-- Carte 1: Hallucinations -->
+        <div class="flip-card reveal" aria-label="Hallucinations — cliquez pour en savoir plus">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <div class="flip-card-front-icon card-icon card-icon-red">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                  <line x1="9" y1="10" x2="15" y2="10"/>
+                </svg>
+              </div>
+              <div class="flip-card-title">Hallucinations</div>
+              <p style="font-size:0.85rem;color:var(--text-secondary);margin-bottom:12px;line-height:1.5;">
+                L'IA invente des réponses plausibles quand elle ne sait pas.
+              </p>
+              <div class="flip-card-hint">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="16 3 21 3 21 8"/><polyline points="4 20 9 20 4 15"/>
+                  <line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/>
+                </svg>
+                Retourner pour les détails
+              </div>
+            </div>
+            <div class="flip-card-back flip-card-back-red">
+              <div class="flip-card-back-title">Hallucinations</div>
+              <p class="flip-card-back-text">
+                Quand l'IA ne connaît pas la réponse, elle n'admet pas son ignorance.
+                Elle génère du contenu qui semble vrai — avec une confiance totale.
+              </p>
+              <div class="flip-card-back-example">
+                Ex : elle peut inventer une référence bibliographique, un article de loi
+                ou des statistiques entièrement fictifs, mais formulés de manière crédible.
+              </div>
+              <p style="font-size:0.78rem;margin-top:12px;color:rgba(255,255,255,0.6);">
+                <strong style="color:rgba(255,255,255,0.9);">Solution :</strong> Exigez des sources. Vérifiez toujours les faits critiques.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Carte 2: Dissonance cognitive -->
+        <div class="flip-card reveal" aria-label="Dissonance cognitive — cliquez pour en savoir plus">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <div class="flip-card-front-icon card-icon card-icon-orange">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"/>
+                  <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+                  <line x1="12" y1="17" x2="12.01" y2="17"/>
+                </svg>
+              </div>
+              <div class="flip-card-title">Dissonance cognitive</div>
+              <p style="font-size:0.85rem;color:var(--text-secondary);margin-bottom:12px;line-height:1.5;">
+                Argumente de façon illogique plutôt qu'admettre une incohérence.
+              </p>
+              <div class="flip-card-hint">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="16 3 21 3 21 8"/><polyline points="4 20 9 20 4 15"/>
+                  <line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/>
+                </svg>
+                Retourner pour les détails
+              </div>
+            </div>
+            <div class="flip-card-back flip-card-back-orange">
+              <div class="flip-card-back-title">Dissonance cognitive</div>
+              <p class="flip-card-back-text">
+                Face à une contradiction, l'IA préfère construire un raisonnement
+                tortueux pour maintenir ses affirmations plutôt qu'admettre
+                qu'elle s'est trompée.
+              </p>
+              <div class="flip-card-back-example">
+                Ex : si vous lui signalez qu'une de ses affirmations est fausse, elle peut
+                vous expliquer pourquoi elle avait quand même raison... avec une logique bancale.
+              </div>
+              <p style="font-size:0.78rem;margin-top:12px;color:rgba(255,255,255,0.6);">
+                <strong style="color:rgba(255,255,255,0.9);">Solution :</strong> Insistez et reformulez. Demandez à l'IA de "recommencer à zéro".
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Carte 3: Complaisance -->
+        <div class="flip-card reveal" aria-label="Complaisance — cliquez pour en savoir plus">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <div class="flip-card-front-icon card-icon card-icon-purple">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3H14z"/>
+                  <path d="M7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"/>
+                </svg>
+              </div>
+              <div class="flip-card-title">Complaisance</div>
+              <p style="font-size:0.85rem;color:var(--text-secondary);margin-bottom:12px;line-height:1.5;">
+                Flatte et valide de mauvaises idées sans esprit critique.
+              </p>
+              <div class="flip-card-hint">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="16 3 21 3 21 8"/><polyline points="4 20 9 20 4 15"/>
+                  <line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/>
+                </svg>
+                Retourner pour les détails
+              </div>
+            </div>
+            <div class="flip-card-back flip-card-back-purple">
+              <div class="flip-card-back-title">Complaisance</div>
+              <p class="flip-card-back-text">
+                L'IA a été entraînée à satisfaire. Elle tend à valider vos idées,
+                même mauvaises, à éviter les désaccords et à vous dire ce que
+                vous voulez entendre.
+              </p>
+              <div class="flip-card-back-example">
+                Ex : présentez-lui un mauvais plan d'affaires, elle trouvera
+                souvent des qualités et minimisera les risques... sauf si vous
+                lui demandez explicitement d'être critique.
+              </div>
+              <p style="font-size:0.78rem;margin-top:12px;color:rgba(255,255,255,0.6);">
+                <strong style="color:rgba(255,255,255,0.9);">Solution :</strong> Red Team — demandez-lui d'être votre adversaire.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Carte 4: Biais humains -->
+        <div class="flip-card reveal" aria-label="Biais humains — cliquez pour en savoir plus">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <div class="flip-card-front-icon card-icon card-icon-blue">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                  <circle cx="9" cy="7" r="4"/>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                </svg>
+              </div>
+              <div class="flip-card-title">Biais humains</div>
+              <p style="font-size:0.85rem;color:var(--text-secondary);margin-bottom:12px;line-height:1.5;">
+                Reproduit les stéréotypes présents dans les données d'entraînement.
+              </p>
+              <div class="flip-card-hint">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="16 3 21 3 21 8"/><polyline points="4 20 9 20 4 15"/>
+                  <line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/>
+                </svg>
+                Retourner pour les détails
+              </div>
+            </div>
+            <div class="flip-card-back flip-card-back-blue">
+              <div class="flip-card-back-title">Biais humains</div>
+              <p class="flip-card-back-text">
+                L'IA apprend sur des textes produits par des humains, avec
+                leurs préjugés. Elle peut donc reproduire et amplifier les
+                stéréotypes de société.
+              </p>
+              <div class="flip-card-back-example">
+                Ex : quand on demandait à une IA d'illustrer "un médecin",
+                elle générait un homme. Pour "une infirmière", une femme.
+              </div>
+              <p style="font-size:0.78rem;margin-top:12px;color:rgba(255,255,255,0.6);">
+                <strong style="color:rgba(255,255,255,0.9);">Solution :</strong> Soyez vigilants sur les descriptions de rôles et de personnes.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════
+       4. VIBE CODING
+  ══════════════════════════════════════════════════════ -->
+  <section id="vibe-coding" aria-label="Vibe Coding">
+    <div class="container">
+      <div class="grid-2" style="align-items:center; gap:48px;">
+
+        <div class="reveal-left">
+          <div class="section-label">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="16 18 22 12 16 6"/>
+              <polyline points="8 6 2 12 8 18"/>
+            </svg>
+            Nouveau paradigme
+          </div>
+          <h2 class="section-title">Vibe Coding</h2>
+          <p style="color:var(--text-secondary);line-height:1.7;margin-bottom:20px;">
+            Créez des applications complètes <strong style="color:var(--text-primary);">sans écrire une seule ligne de code</strong>,
+            en langage naturel. Décrivez ce que vous voulez, l'IA construit pour vous.
+          </p>
+          <p style="color:var(--text-secondary);line-height:1.7;margin-bottom:24px;">
+            Ce changement radical réduit la dépendance aux départements IT et permet à
+            chaque collaborateur de créer ses propres outils en quelques minutes.
+          </p>
+
+          <div style="margin-bottom:24px;">
+            <div style="font-size:0.82rem;font-weight:600;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:12px;">Outils recommandés</div>
+            <div class="vibe-tools">
+              <div class="vibe-tool-chip">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"/>
+                  <path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85m19.5 1.9c-3.5-.93-6.63-.82-8.94 0-2.58.92-5.01 2.86-7.44 6.32"/>
+                </svg>
+                Gemini
+              </div>
+              <div class="vibe-tool-chip">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="16 18 22 12 16 6"/>
+                  <polyline points="8 6 2 12 8 18"/>
+                </svg>
+                Claude Code
+              </div>
+              <div class="vibe-tool-chip">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="2" y="3" width="20" height="14" rx="2"/>
+                  <line x1="8" y1="21" x2="16" y2="21"/>
+                  <line x1="12" y1="17" x2="12" y2="21"/>
+                </svg>
+                Lovable / Bolt
+              </div>
+            </div>
+          </div>
+
+          <div style="display:flex;gap:12px;flex-wrap:wrap;">
+            <div style="display:flex;align-items:center;gap:8px;font-size:0.85rem;color:var(--text-secondary);">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent-green)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+              Pas de formation technique requise
+            </div>
+            <div style="display:flex;align-items:center;gap:8px;font-size:0.85rem;color:var(--text-secondary);">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent-green)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+              Prototypes en quelques minutes
+            </div>
+            <div style="display:flex;align-items:center;gap:8px;font-size:0.85rem;color:var(--text-secondary);">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent-green)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+              Autonomie vis-à-vis des équipes IT
+            </div>
+          </div>
+        </div>
+
+        <!-- Visual code snippet -->
+        <div class="reveal-right">
+          <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;">
+            <!-- Window bar -->
+            <div style="background:rgba(0,0,0,0.3);padding:12px 16px;display:flex;align-items:center;gap:8px;border-bottom:1px solid var(--border);">
+              <div style="width:12px;height:12px;border-radius:50%;background:#ef4444;"></div>
+              <div style="width:12px;height:12px;border-radius:50%;background:#f59e0b;"></div>
+              <div style="width:12px;height:12px;border-radius:50%;background:#10b981;"></div>
+              <span style="margin-left:8px;font-size:0.78rem;color:var(--text-muted);">Conversation avec Claude</span>
+            </div>
+            <div style="padding:24px;">
+              <!-- User message -->
+              <div style="margin-bottom:16px;">
+                <div style="font-size:0.72rem;color:var(--accent-blue);font-weight:700;margin-bottom:6px;text-transform:uppercase;letter-spacing:0.06em;">Vous</div>
+                <div style="background:rgba(79,142,247,0.1);border:1px solid rgba(79,142,247,0.2);border-radius:var(--radius-md);padding:12px 14px;font-size:0.88rem;color:var(--text-primary);line-height:1.5;">
+                  Crée-moi un tableau de bord pour suivre mes ventes mensuelles. Il faut un graphique en barres, un tableau et un export Excel.
+                </div>
+              </div>
+              <!-- AI response -->
+              <div>
+                <div style="font-size:0.72rem;color:var(--accent-purple);font-weight:700;margin-bottom:6px;text-transform:uppercase;letter-spacing:0.06em;">Claude</div>
+                <div style="background:rgba(124,58,237,0.08);border:1px solid rgba(124,58,237,0.2);border-radius:var(--radius-md);padding:12px 14px;font-size:0.88rem;color:var(--text-secondary);line-height:1.6;">
+                  Bien sûr ! Je vais créer votre tableau de bord de ventes avec :<br>
+                  <span style="color:var(--accent-green);">✓</span> Graphique en barres interactif<br>
+                  <span style="color:var(--accent-green);">✓</span> Tableau avec filtres et tri<br>
+                  <span style="color:var(--accent-green);">✓</span> Bouton d'export Excel<br>
+                  <span style="color:var(--accent-cyan);">→</span> <em>Génération du code en cours...</em>
+                </div>
+              </div>
+              <div style="margin-top:16px;padding:10px 14px;background:rgba(16,185,129,0.08);border:1px solid rgba(16,185,129,0.2);border-radius:var(--radius-md);font-size:0.8rem;color:var(--accent-green);display:flex;align-items:center;gap:8px;">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+                Application générée en quelques minutes — sans écrire une ligne de code
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════
+       5. NAVIGATEURS AGENTIQUES
+  ══════════════════════════════════════════════════════ -->
+  <section id="agents" aria-label="Navigateurs agentiques">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <line x1="2" y1="12" x2="22" y2="12"/>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+          </svg>
+          Nouvelle génération
+        </div>
+        <h2 class="section-title">Navigateurs agentiques</h2>
+        <p class="section-subtitle">
+          L'IA ne se contente plus de répondre à vos questions — elle agit à votre place.
+          Les navigateurs agentiques exécutent des tâches complexes de manière autonome sur le web.
+        </p>
+      </div>
+
+      <!-- Comet highlight -->
+      <div class="reveal" style="display:flex;align-items:center;gap:16px;padding:20px 24px;background:linear-gradient(135deg,rgba(79,142,247,0.08),rgba(6,182,212,0.08));border:1px solid rgba(79,142,247,0.2);border-radius:var(--radius-lg);margin-bottom:40px;">
+        <div style="width:48px;height:48px;background:var(--gradient-cyan-blue);border-radius:var(--radius-md);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M2.5 2C2.5 2 8.5 7 8.5 12C8.5 17 2.5 22 2.5 22"/>
+            <path d="M12 5l7 7-7 7"/>
+            <path d="M19 12H5"/>
+          </svg>
+        </div>
+        <div>
+          <div style="font-family:var(--font-heading);font-weight:700;color:var(--text-primary);margin-bottom:4px;">
+            "Comet" par Perplexity
+          </div>
+          <p style="font-size:0.88rem;color:var(--text-secondary);">
+            Le premier navigateur agentique grand public. Il navigue sur le web, remplit des formulaires,
+            envoie des emails et collecte des données — en totale autonomie, sur simple instruction.
+          </p>
+        </div>
+      </div>
+
+      <!-- Pipeline visuel -->
+      <div class="pipeline reveal">
+        <!-- Instruction -->
+        <div class="pipeline-step">
+          <div class="pipeline-step-icon" style="background:rgba(79,142,247,0.1);border-color:rgba(79,142,247,0.4);color:var(--accent-blue);">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+            </svg>
+          </div>
+          <div class="pipeline-step-label">Instruction<br><span style="color:var(--accent-blue);font-size:0.75rem;">En langage naturel</span></div>
+        </div>
+
+        <div class="pipeline-arrow">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"/>
+            <polyline points="12 5 19 12 12 19"/>
+          </svg>
+        </div>
+
+        <!-- Agent -->
+        <div class="pipeline-step">
+          <div class="pipeline-step-icon" style="background:rgba(124,58,237,0.12);border-color:rgba(124,58,237,0.4);color:#a78bfa;">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="3" width="20" height="14" rx="2"/>
+              <line x1="8" y1="21" x2="16" y2="21"/>
+              <line x1="12" y1="17" x2="12" y2="21"/>
+            </svg>
+          </div>
+          <div class="pipeline-step-label">Agent IA<br><span style="color:#a78bfa;font-size:0.75rem;">Navigateur agentique</span></div>
+        </div>
+
+        <div class="pipeline-arrow">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"/>
+            <polyline points="12 5 19 12 12 19"/>
+          </svg>
+        </div>
+
+        <!-- Actions -->
+        <div class="pipeline-step">
+          <div class="pipeline-step-icon" style="background:rgba(6,182,212,0.1);border-color:rgba(6,182,212,0.4);color:var(--accent-cyan);">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+            </svg>
+          </div>
+          <div class="pipeline-step-label">Actions<br><span style="color:var(--accent-cyan);font-size:0.75rem;">Autonomes</span></div>
+        </div>
+      </div>
+
+      <!-- Actions grid -->
+      <div class="pipeline-actions reveal">
+        <div class="pipeline-action">
+          <div class="pipeline-action-icon" style="background:rgba(79,142,247,0.12);color:var(--accent-blue);">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="2" y1="12" x2="22" y2="12"/>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+            </svg>
+          </div>
+          Navigation web autonome
+        </div>
+        <div class="pipeline-action">
+          <div class="pipeline-action-icon" style="background:rgba(16,185,129,0.12);color:var(--accent-green);">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="3" width="18" height="18" rx="2"/>
+              <line x1="3" y1="9" x2="21" y2="9"/>
+              <line x1="3" y1="15" x2="21" y2="15"/>
+              <line x1="9" y1="3" x2="9" y2="21"/>
+            </svg>
+          </div>
+          Remplissage de formulaires
+        </div>
+        <div class="pipeline-action">
+          <div class="pipeline-action-icon" style="background:rgba(239,68,68,0.12);color:var(--accent-red);">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+          </div>
+          Envoi d'emails automatique
+        </div>
+        <div class="pipeline-action">
+          <div class="pipeline-action-icon" style="background:rgba(124,58,237,0.12);color:#a78bfa;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <ellipse cx="12" cy="5" rx="9" ry="3"/>
+              <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/>
+              <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>
+            </svg>
+          </div>
+          Collecte et scraping de données
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════
+       6. CADRE JURIDIQUE
+  ══════════════════════════════════════════════════════ -->
+
+  <!-- ══════════════════════════════════════════════════════
+       7. PANORAMA DES MODÈLES
+  ══════════════════════════════════════════════════════ -->
+  <section id="modeles" aria-label="Panorama des modèles IA">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+          </svg>
+          Comparatif
+        </div>
+        <h2 class="section-title">Panorama des modèles</h2>
+        <p class="section-subtitle">
+          Toutes les IA ne se valent pas. Voici un avis honnête basé sur une utilisation intensive quotidienne.
+        </p>
+      </div>
+
+      <div class="grid-auto reveal-stagger">
+
+        <!-- Copilot -->
+        <div class="model-card reveal" data-glow="rgba(239,68,68,0.2)">
+          <div class="model-card-header">
+            <div>
+              <div class="model-logo" style="background:rgba(0,120,215,0.15);color:#0078d7;font-size:0.7rem;">MSFT</div>
+            </div>
+            <span class="badge badge-red">Décevant</span>
+          </div>
+          <div class="model-name">Copilot</div>
+          <div style="font-size:0.78rem;color:var(--text-muted);margin-bottom:4px;">Microsoft / OpenAI</div>
+          <div class="star-rating" aria-label="Note : 1 étoile sur 5">
+            <svg class="star" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg class="star empty" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg class="star empty" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg class="star empty" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg class="star empty" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <p class="model-verdict">Très décevant malgré son intégration Microsoft 365. Performances en deçà de la concurrence.</p>
+          <div class="rating-bar-container">
+            <div class="rating-bar-label"><span>Performance globale</span><span>20%</span></div>
+            <div class="rating-bar-track">
+              <div class="rating-bar" data-width="20" style="background:linear-gradient(90deg,var(--accent-red),#f87171);"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ChatGPT -->
+        <div class="model-card reveal" data-glow="rgba(79,142,247,0.2)">
+          <div class="model-card-header">
+            <div>
+              <div class="model-logo" style="background:rgba(16,163,127,0.15);color:#10a37f;font-size:0.7rem;">GPT</div>
+            </div>
+            <span class="badge badge-blue">Polyvalent</span>
+          </div>
+          <div class="model-name">ChatGPT</div>
+          <div style="font-size:0.78rem;color:var(--text-muted);margin-bottom:4px;">OpenAI</div>
+          <div class="star-rating" aria-label="Note : 4 étoiles sur 5">
+            <svg class="star" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg class="star" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg class="star" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg class="star" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg class="star empty" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <p class="model-verdict">Polyvalent, excellent pour les Custom GPTs. La référence pour créer des assistants spécialisés.</p>
+          <div class="rating-bar-container">
+            <div class="rating-bar-label"><span>Performance globale</span><span>80%</span></div>
+            <div class="rating-bar-track">
+              <div class="rating-bar" data-width="80" style="background:linear-gradient(90deg,#10a37f,#1fdb97);"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Gemini -->
+        <div class="model-card reveal" data-glow="rgba(16,185,129,0.2)">
+          <div class="model-card-header">
+            <div>
+              <div class="model-logo" style="background:rgba(66,133,244,0.15);color:#4285f4;font-size:0.7rem;">GGL</div>
+            </div>
+            <span class="badge badge-green">Volumes</span>
+          </div>
+          <div class="model-name">Gemini</div>
+          <div style="font-size:0.78rem;color:var(--text-muted);margin-bottom:4px;">Google DeepMind</div>
+          <div class="star-rating" aria-label="Note : 4 étoiles sur 5">
+            <svg class="star" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg class="star" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg class="star" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg class="star" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg class="star empty" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <p class="model-verdict">Très performant pour les grands volumes de données. Sa fenêtre de 2M tokens est unique. Intégré à Google Workspace.</p>
+          <div class="rating-bar-container">
+            <div class="rating-bar-label"><span>Performance globale</span><span>80%</span></div>
+            <div class="rating-bar-track">
+              <div class="rating-bar" data-width="80" style="background:linear-gradient(90deg,#4285f4,var(--accent-cyan));"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Claude -->
+        <div class="model-card featured reveal" data-glow="rgba(124,58,237,0.3)">
+          <div class="model-card-header">
+            <div>
+              <div class="model-logo" style="background:rgba(204,120,92,0.15);color:#cc785c;font-size:0.7rem;">ANT</div>
+            </div>
+            <span class="badge badge-purple">Top Pick</span>
+          </div>
+          <div class="model-name">Claude</div>
+          <div style="font-size:0.78rem;color:var(--text-muted);margin-bottom:4px;">Anthropic</div>
+          <div class="star-rating" aria-label="Note : 5 étoiles sur 5">
+            <svg class="star" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg class="star" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg class="star" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg class="star" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg class="star" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <p class="model-verdict">Meilleure IA actuelle, surtout pour le code. Raisonnement exceptionnel, honnêteté remarquable, idéal pour les tâches complexes.</p>
+          <div class="rating-bar-container">
+            <div class="rating-bar-label"><span>Performance globale</span><span>98%</span></div>
+            <div class="rating-bar-track">
+              <div class="rating-bar" data-width="98" style="background:linear-gradient(90deg,#cc785c,#a855f7);"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- NotebookLM -->
+        <div class="model-card featured reveal" data-glow="rgba(6,182,212,0.3)">
+          <div class="model-card-header">
+            <div>
+              <div class="model-logo" style="background:rgba(6,182,212,0.15);color:var(--accent-cyan);font-size:0.55rem;">NTBK</div>
+            </div>
+            <span class="badge badge-cyan">Gratuit !</span>
+          </div>
+          <div class="model-name">NotebookLM</div>
+          <div style="font-size:0.78rem;color:var(--text-muted);margin-bottom:4px;">Google</div>
+          <div class="star-rating" aria-label="Note : 5 étoiles sur 5">
+            <svg class="star" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg class="star" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg class="star" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg class="star" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg class="star" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <p class="model-verdict">Gratuit, puissant, ne fabule pas. Interrogez jusqu'à 50 de vos documents. Génère infographies, podcasts et synthèses.</p>
+          <div class="rating-bar-container">
+            <div class="rating-bar-label"><span>Rapport qualité/prix</span><span>100%</span></div>
+            <div class="rating-bar-track">
+              <div class="rating-bar" data-width="100" style="background:linear-gradient(90deg,var(--accent-cyan),var(--accent-green));"></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════
+       8. CONSEILS PRATIQUES
+  ══════════════════════════════════════════════════════ -->
+  <section id="conseils" aria-label="Conseils pratiques">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <line x1="12" y1="8" x2="12" y2="12"/>
+            <line x1="12" y1="16" x2="12.01" y2="16"/>
+          </svg>
+          À appliquer
+        </div>
+        <h2 class="section-title">8 conseils pratiques</h2>
+        <p class="section-subtitle">
+          Ces conseils sont issus de centaines d'heures d'utilisation intensive de l'IA.
+          Cliquez sur "Je note ça !" pour sauvegarder ceux qui vous parlent le plus.
+        </p>
+      </div>
+
+      <div class="grid-auto reveal-stagger">
+
+        <!-- Conseil 1 -->
+        <div class="tip-card reveal">
+          <div class="tip-header">
+            <div class="tip-number">1</div>
+            <div class="tip-title">Collaborer, pas exécuter</div>
+          </div>
+          <p class="tip-text">
+            Passez de l'exécution à la collaboration. Discutez avec l'IA, expliquez qui vous êtes,
+            quel est votre contexte, vos objectifs. Plus elle vous connaît, meilleure est la réponse.
+          </p>
+          <div class="tip-footer">
+            <button class="btn-note" data-tip="1"
+              onclick="addNote(1, 'Collaborer, pas exécuter', 'Passez de l\'exécution à la collaboration. Discutez avec l\'IA, expliquez qui vous êtes, quel est votre contexte, vos objectifs.')">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 5v14M5 12h14"/>
+              </svg>
+              Je note ça !
+            </button>
+          </div>
+        </div>
+
+        <!-- Conseil 2 -->
+        <div class="tip-card reveal">
+          <div class="tip-header">
+            <div class="tip-number">2</div>
+            <div class="tip-title">Red Team</div>
+          </div>
+          <p class="tip-text">
+            Forcez l'IA à être critique pour éviter la complaisance. Demandez-lui :
+            "Maintenant, sois mon adversaire. Qu'est-ce qui peut mal tourner dans ce plan ?"
+          </p>
+          <div class="tip-footer">
+            <button class="btn-note" data-tip="2"
+              onclick="addNote(2, 'Red Team', 'Forcez l\'IA à être critique pour éviter la complaisance. Demandez : &quot;Sois mon adversaire. Qu\'est-ce qui peut mal tourner ?&quot;')">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 5v14M5 12h14"/>
+              </svg>
+              Je note ça !
+            </button>
+          </div>
+        </div>
+
+        <!-- Conseil 3 -->
+        <div class="tip-card reveal">
+          <div class="tip-header">
+            <div class="tip-number">3</div>
+            <div class="tip-title">Exiger l'honnêteté</div>
+          </div>
+          <p class="tip-text">
+            Ajoutez cette phrase à vos prompts : <em>"Si tu n'as pas la réponse, indique-le-moi clairement
+            plutôt que d'inventer."</em> Simple mais terriblement efficace.
+          </p>
+          <div class="tip-footer">
+            <button class="btn-note" data-tip="3"
+              onclick="addNote(3, 'Exiger l\'honnêteté', 'Ajoutez dans vos prompts : &quot;Si tu n\'as pas la réponse, indique-le-moi clairement plutôt que d\'inventer.&quot;')">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 5v14M5 12h14"/>
+              </svg>
+              Je note ça !
+            </button>
+          </div>
+        </div>
+
+        <!-- Conseil 4 -->
+        <div class="tip-card reveal">
+          <div class="tip-header">
+            <div class="tip-number">4</div>
+            <div class="tip-title">Custom GPTs</div>
+          </div>
+          <p class="tip-text">
+            Créez des assistants spécialisés monomaniaques : un GPT uniquement pour vos
+            contrats, un autre pour votre secteur. Plus l'assistant est spécialisé, plus il est performant.
+          </p>
+          <div class="tip-footer">
+            <button class="btn-note" data-tip="4"
+              onclick="addNote(4, 'Custom GPTs', 'Créez des assistants spécialisés monomaniaques : un GPT pour vos contrats, un autre pour votre secteur. La spécialisation améliore la performance.')">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 5v14M5 12h14"/>
+              </svg>
+              Je note ça !
+            </button>
+          </div>
+        </div>
+
+        <!-- Conseil 5 -->
+        <div class="tip-card reveal">
+          <div class="tip-header">
+            <div class="tip-number">5</div>
+            <div class="tip-title">NotebookLM</div>
+          </div>
+          <p class="tip-text">
+            Interrogez vos propres documents avec NotebookLM : rapports annuels, contrats, procédures.
+            Jusqu'à 50 sources. Ne fabule pas. Génère infographies et podcasts. Et c'est gratuit.
+          </p>
+          <div class="tip-footer">
+            <button class="btn-note" data-tip="5"
+              onclick="addNote(5, 'NotebookLM', 'Interrogez vos propres documents avec NotebookLM (gratuit). Jusqu\'à 50 sources. Ne fabule pas. Génère infographies et podcasts.')">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 5v14M5 12h14"/>
+              </svg>
+              Je note ça !
+            </button>
+          </div>
+        </div>
+
+        <!-- Conseil 6 -->
+        <div class="tip-card reveal">
+          <div class="tip-header">
+            <div class="tip-number">6</div>
+            <div class="tip-title">Deep Research</div>
+          </div>
+          <p class="tip-text">
+            Ne l'utilisez pas comme un moteur de recherche classique. Deep Research prend
+            10 à 20 minutes pour produire un rapport complet et sourcé. Posez une vraie question complexe.
+          </p>
+          <div class="tip-footer">
+            <button class="btn-note" data-tip="6"
+              onclick="addNote(6, 'Deep Research', 'Ne pas utiliser comme un moteur de recherche. Deep Research prend 10-20 min pour produire un rapport complet et sourcé.')">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 5v14M5 12h14"/>
+              </svg>
+              Je note ça !
+            </button>
+          </div>
+        </div>
+
+        <!-- Conseil 7 -->
+        <div class="tip-card reveal">
+          <div class="tip-header">
+            <div class="tip-number">7</div>
+            <div class="tip-title">Passer au payant</div>
+          </div>
+          <p class="tip-text">
+            Les versions payantes (~20€/mois) offrent une différence énorme. Comparez plusieurs
+            modèles en parallèle : ce que l'un rate, l'autre le réussit. Diversifiez vos outils.
+          </p>
+          <div class="tip-footer">
+            <button class="btn-note" data-tip="7"
+              onclick="addNote(7, 'Passer au payant', 'Versions payantes (~20€/mois) = différence énorme. Comparez plusieurs modèles en parallèle. Ce que l\'un rate, l\'autre le réussit.')">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 5v14M5 12h14"/>
+              </svg>
+              Je note ça !
+            </button>
+          </div>
+        </div>
+
+        <!-- Conseil 8 -->
+        <div class="tip-card reveal">
+          <div class="tip-header">
+            <div class="tip-number">8</div>
+            <div class="tip-title">Par où commencer</div>
+          </div>
+          <p class="tip-text">
+            Pour débuter : <strong style="color:var(--text-primary);">NotebookLM + Claude</strong>.
+            En entreprise : optez pour le paiement à l'usage via
+            <strong style="color:var(--text-primary);">Open Web UI</strong> pour garder le contrôle des coûts.
+          </p>
+          <div class="tip-footer">
+            <button class="btn-note" data-tip="8"
+              onclick="addNote(8, 'Par où commencer', 'Pour débuter : NotebookLM + Claude. En entreprise : paiement à l\'usage via Open Web UI pour contrôler les coûts.')">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 5v14M5 12h14"/>
+              </svg>
+              Je note ça !
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════
+       9. QUIZ
+  ══════════════════════════════════════════════════════ -->
+  <section id="quiz" aria-label="Quiz interactif">
+    <div class="container">
+      <div class="section-header reveal" style="text-align:center;">
+        <div class="section-label" style="margin:0 auto 16px;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+            <line x1="12" y1="17" x2="12.01" y2="17"/>
+          </svg>
+          Testez-vous
+        </div>
+        <h2 class="section-title">Quiz de la conférence</h2>
+        <p class="section-subtitle" style="margin:0 auto;">
+          3 questions pour valider ce que vous avez retenu. Bonne chance !
+        </p>
+      </div>
+
+      <div id="quiz-container" class="quiz-container reveal">
+        <!-- Progress -->
+        <div class="quiz-progress">
+          <div class="quiz-step-indicators">
+            <div class="quiz-step-dot active"></div>
+            <div class="quiz-step-dot"></div>
+            <div class="quiz-step-dot"></div>
+          </div>
+          <span class="quiz-question-counter" style="font-size:0.82rem;color:var(--text-muted);">Question 1 / 3</span>
+        </div>
+
+        <!-- Question card (populated by JS) -->
+        <div class="quiz-card"></div>
+
+        <!-- Result card (shown at end) -->
+        <div class="quiz-result-card"></div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ════════════════════════════════════════════════════════
+     NOTES SIDEBAR
+════════════════════════════════════════════════════════ -->
+<div id="notes-sidebar" role="complementary" aria-label="Mes notes" aria-hidden="true">
+  <div class="sidebar-header">
+    <h2 class="sidebar-title">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent-cyan)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline;vertical-align:middle;margin-right:6px;">
+        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+        <polyline points="14 2 14 8 20 8"/>
+        <line x1="16" y1="13" x2="8" y2="13"/>
+        <line x1="16" y1="17" x2="8" y2="17"/>
+      </svg>
+      Mes notes
+    </h2>
+    <button class="sidebar-close" aria-label="Fermer les notes">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="18" y1="6" x2="6" y2="18"/>
+        <line x1="6" y1="6" x2="18" y2="18"/>
+      </svg>
+    </button>
+  </div>
+
+  <div class="sidebar-body">
+    <div class="sidebar-empty">
+      <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+        <polyline points="14 2 14 8 20 8"/>
+        <line x1="16" y1="13" x2="8" y2="13"/>
+        <line x1="16" y1="17" x2="8" y2="17"/>
+        <polyline points="10 9 9 9 8 9"/>
+      </svg>
+      <p>Cliquez sur "Je note ça !" pour sauvegarder des conseils ici.</p>
+    </div>
+  </div>
+
+  <div class="sidebar-footer">
+    <button class="btn-copy" style="display:none;">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="9" y="9" width="13" height="13" rx="2"/>
+        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+      </svg>
+      Copier mes notes
+    </button>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════════════════════ -->
+<footer role="contentinfo">
+  <div class="footer-inner">
+    <div class="footer-name">Diederick Legrain — <a href="https://ai-shift.be" target="_blank" rel="noopener" style="color:var(--accent-blue);text-decoration:none;">AI-Shift.be</a></div>
+    <div class="footer-dots">
+      <span>Conférence UCM</span>
+      <span class="footer-dot-sep"></span>
+      <span>Intelligence Artificielle</span>
+      <span class="footer-dot-sep"></span>
+      <span>2026</span>
+    </div>
+    <div class="footer-meta">
+      Créé avec passion pour démystifier l'IA et accompagner les entreprises dans leur transformation.
+    </div>
+  </div>
+</footer>
+
+<!-- ════════════════════════════════════════════════════════
+     SCRIPTS
+════════════════════════════════════════════════════════ -->
+<script type="module" src="js/main.js"></script>
+
+</body>
+</html>
